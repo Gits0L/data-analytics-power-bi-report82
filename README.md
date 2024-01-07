@@ -1,49 +1,34 @@
-# Exploratory data analysis project: customer loans in finance
+# Power Bi Report: Retail analytics
 ## Contents 
 1. Project information
-   
-    1.1 Function
-   
-     1.2 Aims
-   
-     1.3 Learning objectives
-     
-2. Installation
-3. Usage
-4. File structure
+2. Function
+3. Milestones
+4. Installation
+5. Usage
+6. File structure
 
-### 1. Project infromation 
-This project involves a comprehensive analysis of a loan portfolio database, leveraging a range of statistical skills such as (mention specific statistical skills) and employing advanced data visualization techniques like (mention specific data visualization techniques). The primary objective is to reinforce and consolidate the data analysis skills imparted during the analytics module of the Aicore coding bootcamp. Participants in this project will step into the role of a data analyst operating within a financial institution.The project allows the user to take on the role of a data analysist working within a financial institution. 
+### 1. Project information 
+This project entails the development of a comprehensive report that provides a succinct business overview created for C-suite executives within a global retail corporation. The project is split into 10 milestones each containing various tasks to complete the visualisation. 
 
-#### 1.1 Function 
-The function of this project is to gain proficiency in navigating and interpreting the loan information dataset. This is essential to enable the company to make well-informed decisions regarding loan approvals and, simultaneously, to effectively manage and mitigate any associated risks. 
+#### 2. Function 
+The function of this project is to utulise the skills learnt in the PowerBi module of the aicore datascience course to build a data visualisation mimicking real retail data. By leveraging the company's business objectives, including sales metrics on a quarterly and annual basis, the report aims to deliver actionable insights to guide the company's future strategic direction.
 
-#### 1.2 Aims
-The aim of the project is to become familiar with the loan information dataset in order to allow the company to make informed decision about loan approvals and to mitigate any incurred risks. It also serves as a significant milestone within the data sicence bootcamp, offering an industry specific example for users to understand the steps involved in analysing a dataset and the impact of analytical insights on strategic decision-making within a real-world business context.
+#### 3. Milestones
+The aim of the project is to 
 
-#### 1.3 Learning objectives
-- Using classes
-- Class inheritance
-- Loading data from different file types (csv, yaml)
-- Connecting to databases 
-- Defining functions
-- Analysisng data
-- Visualising data
-- Extracting data
-- Using data to make informed predictions and suggestions
 
-  #### 2. Installation
+  #### 4. Installation
   - Clone GitHub repository:
-    git clone https://github.com/Gits0L/exploratory-data-analysis---customer-loans-in-finance580.git
+    git clone 
 
   - Navigate into the project directory:
-    cd exploratory-data-analysis---customer-loans-in-finance580
+    cd 
 
-  #### 3. Usage
+  #### 5. Usage
 
   - Use code to import import and connect to database using credentials, clean and analyse financial data 
 
-  #### 4. File structure
+  #### 6. File structure
   - README.md: Repository information 
   - db_utils.py: Final version 
   - loans_keywords: Glossary of loan columns to understand dataset
