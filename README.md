@@ -50,35 +50,53 @@ Model Creation***
 ![alt text](PICTURE OF MODEL)
 1. Created a date table to form the basis for time intelligence within the model using the folllowing DAX formula: 
 
-1. Building one-to-many relationships with a single filter between the following tables to form a star-based schema: 
+1. Built one-to-many relationships with a single filter between the following tables to form a star-based schema: 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orders[product_code] &rarr; Products[product_code]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orders[product_code] &rarr; Products[product_code]
 
-Orders[Store Code] &rarr; Stores[store code]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orders[Store Code] &rarr; Stores[store code]
 
-Orders[User ID] &rarr; Customers[User UUID]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orders[User ID] &rarr; Customers[User UUID]
 
-Orders[Order Date] &rarr; Date[date]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orders[Order Date] &rarr; Date[date]
 
-Orders[Shipping Date] &rarr; Date[date]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orders[Shipping Date] &rarr; Date[date]
 
-3. Creating DAX Formulas for the following measures: 
+3. Created DAX Formulas for the following measures: 
 
-- Total Orders
 
- - Total Revenue
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Orders: 
+DAX
 
- - Total Profit 
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Revenue: 
+ DAX
 
- - Total Customers
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Profit: 
+ DAX
 
-- Total Quantity
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Customers:
+ DAX
 
-- Profit YTF
 
-- Revenue YTD
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Quantity: 
+DAX
 
-4. Creating date hierachy 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Profit YTF: 
+DAX
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Revenue YTD:
+DAX
+
+4. Created date hierachy
+![alt text](PICTURE)
+
+5. 
+
 
 ***Miletone 3:
 Customer Detail Page***
