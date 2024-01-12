@@ -1,4 +1,5 @@
 # Power Bi Report: Retail analytics
+![alt text](https://www.whizlabs.com/blog/wp-content/uploads/2023/09/power-bi-report-builder.jpeg)
 ## Contents of README
 ``````
 1. Project Information
@@ -12,38 +13,54 @@
 
 ### 1. Project information 
 ---
-This project entails the development of a comprehensive report that provides a succinct business overview created for C-suite executives within a global retail corporation. The project is split into 10 milestones each containing various tasks to complete the visualisation. 
+This project entails the development of a comprehensive report consisting of the following pages:
 
-#### 2. Function 
+| Page | Contents |
+| ----------- | ----------- |
+| Exective Summary | Company performance overview detailing outcomes against key targets  |
+| Customer Info |  Customer information page detailing customer count by revenue and location metrics  | 
+| Product Detail | Product information outline showing success of product sales by product and region |
+| Stores Map | Map visual showing regional profit performance by quarter  |
+| Stores Drillthough | Allows drillthough to particular store within region |
+
+
+
+
+### 2. Function 
 ---
-The function of this project is to utulise the skills learnt in the PowerBi module of the aicore datascience course to build a data visualisation mimicking real retail data. By leveraging the company's business objectives, including sales metrics on a quarterly and annual basis, the report aims to deliver actionable insights to guide the company's future strategic direction.
+The function of this project is to utulise the skills learnt in the PowerBi module of the aicore datascience course to build a data visualisation mimicking real retail data. By leveraging the company's business objectives, including sales metrics on a quarterly and annual basis, the report aims to deliver actionable insights to guide the company's future strategic direction. The report provides a succinct business overview created for C-suite executives within a global retail corporation. 
 
-#### 3. Milestones
+### 3. Milestones:
 ---
+The project is split into milestones each containing various tasks to complete the visualisation. 
 
-***Milestone 1-Importing Tables***
+***Milestone 1:
+Importing Tables***
+ 
+ | Table | Importing Method | Transformations | 
+| ----------- | ----------- | ----------- |
+| Orders | Azure SQL Database  | Renamed and split columns. Deleted private columns. Removed empty date values. |
+| Products |  CSV download  | Split weights and measurments into 2 seperate columns. Converted values to decimals. Converted values to kg. Deleted unimportant columns |
+| Stores | Azure BLob Storage | Renamed columns |
+| Customers | Combined from zip file  | Created Full Name column. Deleted unused columns. Renamed columns  |
 
-1. Importing the tables and transorming the data of the following data tables:
- - Orders
- - Products
- - Stores 
- - Customers
+***Milestone 2:
+Model Creation***
 
-***Milestone 2-Model Creation***
-
-1. Creating a date table to form the basis for time intelligence within the model. 
+![alt text](PICTURE OF MODEL)
+1. Created a date table to form the basis for time intelligence within the model using the folllowing DAX formula: 
 
 1. Building one-to-many relationships with a single filter between the following tables to form a star-based schema: 
 
-Orders[product_code] --> Products[product_code]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orders[product_code] &rarr; Products[product_code]
 
-Orders[Store Code] --> Stores[store code]
+Orders[Store Code] &rarr; Stores[store code]
 
-Orders[User ID] --> Customers[User UUID]
+Orders[User ID] &rarr; Customers[User UUID]
 
-Orders[Order Date] --> Date[date]
+Orders[Order Date] &rarr; Date[date]
 
-Orders[Shipping Date] --> Date[date]
+Orders[Shipping Date] &rarr; Date[date]
 
 3. Creating DAX Formulas for the following measures: 
 
@@ -63,15 +80,20 @@ Orders[Shipping Date] --> Date[date]
 
 4. Creating date hierachy 
 
-***Miletone 3 Customer Detail Page***
+***Miletone 3:
+Customer Detail Page***
 
-***Milestone 4 Exectuvie Summary Page***
+***Milestone 4:
+Exectuvie Summary Page***
 
-***Milestone 5 Product Detail Page***
+***Milestone 5: 
+Product Detail Page***
 
-***Milestone 5 Stores Map Page***
+***Milestone 5:
+Stores Map Page***
 
-***Milestone 6 Metrics with SQL***
+***Milestone 6:
+Metrics with SQL***
 
 
 Uploading the following tables:
@@ -84,10 +106,7 @@ Uploading the following tables:
   #### 4. Installation
   ---
   - Clone GitHub repository:
-    git clone 
-
-  - Navigate into the project directory:
-    cd 
+    git clone https://github.com/Gits0L/data-analytics-power-bi-report82.git
 
   #### 5. Usage
 ---
