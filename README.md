@@ -8,7 +8,7 @@
 5. Usage
 6. File Structure
 ``````
----
+
 
 ### 1. Project information 
 ---
