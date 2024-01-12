@@ -125,7 +125,7 @@ Customer Detail Page***
 | Donut Chart | [Total Customers]  | Users[Country] | None |
 | Column Chart | [Total Customers] | Products[Category] | None |
 | Line Chart with trendline forecasting the next 10 periods (confidence interval = 95%) | X Axis: Date Hierarchy  Y Axis: [Total Customers] | None | None |
-| Table | Orders[Full Name] [Total Revenue] [ Total Orders]  | Top 20 by [Total Revenue] | Displayed data bars based on [Total Revenue] |
+| Table | Orders[Full Name] [Total Revenue] [ Total Orders]  | Top 20 by [Total Revenue] | Data bars based on [Total Revenue] |
 | Card | Customers[Full Name]  | Top 1 by [Total Revenue] | None |
 | Card | [Total Revenue]  | Top 1 by [Total Revenue] | None |
 | Card | [ Total Orders]  | Top 1 by [Total Revenue] | None |
@@ -134,16 +134,70 @@ Customer Detail Page***
 ***Milestone 4:
 Exectuvie Summary Page***
 
+![alt text](FINISHED PAGE)
+
+| Visual | Measures Used | Filters  | Additional Formatting |
+| ----------- | ----------- | -------- | ------ |
+| Card | [Total Revenue] | None | 2 Decimals |
+| Card | [Total Orders]  | Users[Country] | 1 Decimal |
+| Card | [Total Profit] | Products[Category] | 2 Decimals |
+| Line chart | X Axis: Date Hierarchy[Start of Year, Start of Quarter, Start of Month] Y Axis: [Total Revenue] | None | None |
+| Donut | [Total Revenue] [ Total Orders]  | By Store[Country] and Store[Store Type] | None |
+| Clustered Bar Chart | Total Orders  | None | None |
+| KPI | Value: [Total Revenue] Trend: [Start of Quarter] Target: [Target Revenue]  | By [Quarter] | Trend Axis: On Direction: High is Godd Bad Colour: red Transparency 15% Decimal: 1|
+| KPI| Value: [Total Orders] Trend: [Start of Quarter] Target: [Target Orders]  | By [Quarter] | Trend Axis: On Direction: High is Godd Bad Colour: red Transparency 15% Decimal: 1 |
+| KPI | Value: [Total Profit] Trend: [Start of Quarter] Target: [Target Profit]  | By [Quarter] | Trend Axis: On Direction: High is Godd Bad Colour: red Transparency 15% Decimal: 1 |
+
+The following measures were created:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Previous Quarter Profit:
+DAX
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Previous Quarter Revenue:
+DAX
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Previous Quarter Orders:
+DAX
+
 ***Milestone 5: 
 Product Detail Page***
+
+| Visual | Measures Used | Filters  | Additional Formatting |
+| ----------- | ----------- | -------- | ------ |
+| Gauge | [Total Revenue] | None | 2 Decimals |
+| Gauge | [Total Orders]  | Users[Country] | 1 Decimal |
+| Gauge | [Total Profit] | Products[Category] | 2 Decimals |
+| Area chart | X Axis: Date Hierarchy[Start of Year, Start of Quarter, Start of Month] Y Axis: [Total Revenue] | None | None |
+| Table | [Total Revenue] [ Total Orders]  | By Store[Country] and Store[Store Type] | None |
+| Scatter | Total Orders  | None | None |
+| Slicer | Value: [Total Revenue] Trend: [Start of Quarter] Target: [Target Revenue]  | By [Quarter] | Trend Axis: On Direction: High is Good Bad Colour: red Transparency: 15% Decimal: 1|
 
 ***Milestone 5:
 Stores Map Page***
 
+| Visual | Measures Used | Filters  | Additional Formatting |
+| ----------- | ----------- | -------- | ------ |
+| Map |  | None | 2 Decimals |
+| Slicer |  | None | 2 Decimals |
+ Drillthrough page 
+
+ Tooltip page
+
 ***Milestone 6:
+Cross Filtering***
+
+***Milestone 7:
 Metrics with SQL***
+1. Connected to SQL Server via SQLTools extension in VSCode using the following credentials:
+HOST, PORT, DATABASE, USERNAME, PASSWORD
 
+1. SQL Query to extract all table names: 
+QUERY 
 
+1. SQL Query to print columns in all tables: 
+QUERY 
+
+1. Exported all files to CSV file 
 Uploading the following tables:
 1. Orders
 2. Products
