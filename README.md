@@ -11,7 +11,6 @@
 ``````
 
 
-https://github.com/Gits0L/data-analytics-power-bi-report82/assets/147774425/e6573b21-5152-4f4e-9b9d-116b77cc845a
 
 
 
