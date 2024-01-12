@@ -11,6 +11,10 @@
 ``````
 
 
+https://github.com/Gits0L/data-analytics-power-bi-report82/assets/147774425/e6573b21-5152-4f4e-9b9d-116b77cc845a
+
+
+
 ### 1. Project information 
 ---
 This project entails the development of a comprehensive report consisting of the following pages:
@@ -18,7 +22,11 @@ This project entails the development of a comprehensive report consisting of the
 | Page | Contents |
 | ----------- | ----------- |
 | Exective Summary | Company performance overview detailing outcomes against key targets  |
-| Customer Info |  Customer information page detailing customer count by revenue and location metrics  | 
+| Customer Info |  Customer information page detailing cu
+
+https://github.com/Gits0L/data-analytics-power-bi-report82/assets/147774425/b2f33fee-b38e-4f72-8a45-fd003a07be7d
+
+stomer count by revenue and location metrics  | 
 | Product Detail | Product information outline showing success of product sales by product and region |
 | Stores Map | Map visual showing regional profit performance by quarter  |
 | Stores Drillthough | Allows drillthough to particular store within region |
