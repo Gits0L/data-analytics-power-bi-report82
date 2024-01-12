@@ -198,6 +198,12 @@ QUERY
 QUERY 
 
 1. Exported all files to CSV file 
+The following example shows exporting to a csv file for the questions files 
+
+[(![](<Screenshot 2024-01-12 at 23.19.30.png>))](<../Library/Mobile Documents/com~apple~CloudDocs/AICORE/Power Bi/Screen Recording 2024-01-12 at 23.11.40.mov>)
+
+[Title](<../Library/Mobile Documents/com~apple~CloudDocs/AICORE/Power Bi/Screen Recording 2024-01-12 at 23.11.40.mov>)
+
 Uploading the following tables:
 1. Orders
 2. Products
