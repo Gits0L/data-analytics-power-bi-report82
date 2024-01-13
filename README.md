@@ -1,5 +1,10 @@
 # Power Bi Report: Retail analytics
-![alt text](https://www.whizlabs.com/blog/wp-content/uploads/2023/09/power-bi-report-builder.jpeg)
+
+|      |       |
+:-------------------------:|:-------------------------:
+![Alt text](<Executive Summary .png>))  | ![Alt text](<Customer Info.png>))
+![Alt text](<Product Detail.png>)  |  ![Alt text](<Map VIsual .png>)
+
 ## Contents of README
 ``````
 1. Project Information
@@ -25,12 +30,6 @@ This project entails the development of a comprehensive report consisting of the
 | Product Detail | Product information outline showing success of product sales by product and region |
 | Stores Map | Map visual showing regional profit performance by quarter  |
 | Stores Drillthough | Allows drillthough to particular store within region |
-
-As seen below: 
-|      |       |
-:-------------------------:|:-------------------------:
-![Alt text](<Executive Summary .png>))  | ![Alt text](<Customer Info.png>))
-![Alt text](<Product Detail.png>)  |  ![Alt text](<Map VIsual .png>)
 
 ### 2. Function 
 ---
