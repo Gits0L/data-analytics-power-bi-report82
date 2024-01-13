@@ -29,10 +29,8 @@ This project entails the development of a comprehensive report consisting of the
 As seen below: 
 |      |       |
 :-------------------------:|:-------------------------:
-![](https://www.whizlabs.com/blog/wp-content/uploads/2023/09/power-bi-report-builder.jpeg)  |  ![](https://www.whizlabs.com/blog/wp-content/uploads/2023/09/power-bi-report-builder.jpeg)
-![](https://www.whizlabs.com/blog/wp-content/uploads/2023/09/power-bi-report-builder.jpeg)  |  ![](https://www.whizlabs.com/blog/wp-content/uploads/2023/09/power-bi-report-builder.jpeg)
-
-
+![Alt text](<Executive Summary .png>))  | ![Alt text](<Customer Info.png>))
+![Alt text](<Product Detail.png>)  |  ![Alt text](<Map VIsual .png>)
 
 ### 2. Function 
 ---
