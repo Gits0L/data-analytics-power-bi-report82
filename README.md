@@ -122,6 +122,7 @@ CALCULATE(
 DAX
 
 7. Created a geography hierarchy
+   
 ![Alt text](<geog hierarch.png>)
 
 ***Miletone 3:
@@ -162,13 +163,21 @@ Executive Summary Page***
 The following measures were created:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Previous Quarter Profit:
-DAX
+VAR CurrentQuarterStart = MAX('Dates'[Start of Quarter])
+RETURN
+CALCULATE([Total Profit], 
+    'Dates'[Start Of Quarter] = CurrentQuarterStart
+)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Previous Quarter Revenue:
-DAX
+VAR CurrentQuarterStart = MAX('Dates'[Start of Quarter])
+RETURN
+CALCULATE([Total Revenue], 
+    'Dates'[Start Of Quarter] = CurrentQuarterStart
+)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Previous Quarter Orders:
-DAX
+VAR CurrentQuarterStart = MAX('Dates'[Start Of Quarter]) RETURN CALCULATE('Measures Table'[Total Orders], 'Dates'[Start Of Quarter] = CurrentQuarterStart)
 
 ***Milestone 5: 
 Product Detail Page***
