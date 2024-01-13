@@ -103,9 +103,7 @@ CALCULATE(
 SUM(Orders[Product Quantity])
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Profit YTD:  
-CALCULATE(
-    [Total Profit], FILTER(ALL('Dates'), VALUE('Dates'[Year]) = (YEAR(MAX('Dates'[Order Date])))
-    ))
+CALCULATE([Total Profit], FILTER(ALL('Dates'), VALUE('Dates'[Year]) = (YEAR(MAX('Dates'[Order Date])))))
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Revenue YTD:
