@@ -195,16 +195,19 @@ Product Detail Page***
 ***Milestone 5:
 Stores Map Page***
 
+![Alt text](<Map VIsual .png>)
+
 | Visual | Measures Used | Filters  | Additional Formatting |
 | ----------- | ----------- | -------- | ------ |
 | Map |  | None | 2 Decimals |
 | Slicer |  | None | 2 Decimals |
- Drillthrough page 
+ Drillthrough page |             |        |     |
 
  Tooltip page
 
 ***Milestone 6:
-Cross Filtering***
+Interactions***
+
 
 ***Milestone 7:
 Metrics with SQL***
@@ -212,7 +215,7 @@ Metrics with SQL***
 HOST, PORT, DATABASE, USERNAME, PASSWORD
 
 1. SQL Query to extract all table names: 
-QUERY 
+SELECT 
 
 1. SQL Query to print columns in all tables: 
 QUERY 
