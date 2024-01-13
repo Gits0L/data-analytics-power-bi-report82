@@ -3,7 +3,7 @@
 |      |       |
 :-------------------------:|:-------------------------:
 ![Alt text](<Executive Summary .png>)  | ![Alt text](<Customer Info.png>)
-![Alt text](<Product Detail.png>)  |  ![Alt text](<Map VIsual .png>)
+![Alt text](<Product Detail.png>)   | ![ ](<stores page.png>) |
 
 ## Contents of README
 ``````
@@ -36,8 +36,7 @@ The function of this project is to utulise the skills learnt in the PowerBi modu
  #### The project is split into milestones each containing various tasks to complete the visualisation.
 ---
 
-***Milestone 1:
-Importing Tables***
+***Importing Tables***
  
  | Table | Importing Method | Transformations | 
 | ----------- | ----------- | ----------- |
@@ -46,8 +45,7 @@ Importing Tables***
 | Stores | Azure BLob Storage | Renamed columns |
 | Customers | Combined from zip file  | Created Full Name column. Deleted unused columns. Renamed columns  |
 
-***Milestone 2:
-Model Creation***
+***Model Creation***
 
 ![alt text](PICTURE OF MODEL)
 1. Created a date table to form the basis for time intelligence within the model using the folllowing DAX formula: 
@@ -70,6 +68,7 @@ Dates = DATESBETWEEN(
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Orders[Shipping Date] &rarr; Date[date]
 
 3. Created DAX Formulas for the following measures: 
+
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Orders: 
@@ -111,25 +110,20 @@ CALCULATE(
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Revenue per Customer:
 [Total Revenue] * [Total Unique Customers]
 
+
 4. Created date hierachy
 
 ![Alt text](<date hierarchy.png>)
 
 5. Created a calculated column to create a full country name: 
-  
 
-6. Created a geography column with the following DAX formula:
-DAX
-
-7. Created a geography hierarchy
+6. Created a geography hierarchy
    
 ![Alt text](<geog hierarch.png>)
 
-***Miletone 3:
-Customer Detail Page***
+***Customer Detail Page***
 
 ![Alt text](<Customer Info.png>)
-
 
 | Visual | Measures Used | Filters  | Aditional Formatting |
 | ----------- | ----------- | -------- | ------ |
@@ -143,8 +137,7 @@ Customer Detail Page***
 | Card | [ Total Orders]  | Top 1 by [Total Revenue] | None |
 | Slicer | Dates[Year]  | Between | None |
 
-***Milestone 4:
-Executive Summary Page***
+***Executive Summary Page***
 
 ![Alt text](<Executive Summary .png>) 
 
@@ -154,7 +147,8 @@ Executive Summary Page***
 | Card | [Total Orders]  | Users[Country] | 1 Decimal |
 | Card | [Total Profit] | Products[Category] | 2 Decimals |
 | Line chart | X Axis: Date Hierarchy[Start of Year, Start of Quarter, Start of Month] Y Axis: [Total Revenue] | None | None |
-| Donut | [Total Revenue] [ Total Orders]  | By Store[Country] and Store[Store Type] | None |
+| Donut | [Total Revenue]  | Store[Country] | None |
+| Donut | [ Total Revenue]  | Store[Store Type] | None |
 | Clustered Bar Chart | Total Orders  | None | None |
 | KPI | Value: [Total Revenue] Trend: [Start of Quarter] Target: [Target Revenue]  | By [Quarter] | Trend Axis: On Direction: High is Godd Bad Colour: red Transparency 15% Decimal: 1|
 | KPI| Value: [Total Orders] Trend: [Start of Quarter] Target: [Target Orders]  | By [Quarter] | Trend Axis: On Direction: High is Godd Bad Colour: red Transparency 15% Decimal: 1 |
@@ -179,56 +173,100 @@ CALCULATE([Total Revenue],
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Previous Quarter Orders:
 VAR CurrentQuarterStart = MAX('Dates'[Start Of Quarter]) RETURN CALCULATE('Measures Table'[Total Orders], 'Dates'[Start Of Quarter] = CurrentQuarterStart)
 
-***Milestone 5: 
-Product Detail Page***
+***Product Detail Page***
 
 | Visual | Measures Used | Filters  | Additional Formatting |
 | ----------- | ----------- | -------- | ------ |
-| Gauge | [Total Revenue] | None | 2 Decimals |
-| Gauge | [Total Orders]  | Users[Country] | 1 Decimal |
-| Gauge | [Total Profit] | Products[Category] | 2 Decimals |
-| Area chart | X Axis: Date Hierarchy[Start of Year, Start of Quarter, Start of Month] Y Axis: [Total Revenue] | None | None |
-| Table | [Total Revenue] [ Total Orders]  | By Store[Country] and Store[Store Type] | None |
-| Scatter | Total Orders  | None | None |
-| Slicer | Value: [Total Revenue] Trend: [Start of Quarter] Target: [Target Revenue]  | By [Quarter] | Trend Axis: On Direction: High is Good Bad Colour: red Transparency: 15% Decimal: 1|
+| Gauge | Value: [Total Orders] Target: [Quarterly Growth] | None  | Colour for target not met: red |
+| Gauge | Value: [Total Revenue] Target: [Quarterly Growth] | None | Colour for target not met: red |
+| Gauge | Value:[Total Profit] Target: [Quarterly Growth] | None | Colour for target not met: red |
+| Area chart | X Axis: Date Hierarchy[Start of Quarter] Y Axis: [Total Revenue] Legend: Products[Category] | None | None |
+| Table | [Product Description] [Total Revenue] [Total Customers] [Total Orders] [Profit per Order] [ Total Orders]  | By Store[Country] and Store[Store Type] | None |
+| Scatter | Value: Products[Description] X-Axis: Products[Profit per Item] Y-Axis Products[Total Quantity] Legend: Products[Category] | None | None |
 
-***Milestone 5:
-Stores Map Page***
+***Stores Map Page***
 
 ![Alt text](<Map VIsual .png>)
 
 | Visual | Measures Used | Filters  | Additional Formatting |
 | ----------- | ----------- | -------- | ------ |
-| Map |  | None | 2 Decimals |
-| Slicer |  | None | 2 Decimals |
- Drillthrough page |             |        |     |
+| Map | Location: [Geography hierarchy] Bubble size: [Profit YTD] | Country Slicer | Show Labels: On Auto-Zoom: On Zoom buttons: Off Lasso button: Off |
 
- Tooltip page
+***Stores Page***
 
-***Milestone 6:
-Interactions***
+![Alt text](<Map Visual .png>) 
 
+| Visual | Measures Used |
+| ----------- | ----------- |
+| Table | [Description] [Profit YTD] [Total Orders] [Total Revenue] |  
+| Column Chart | [Total Orders] Products[Category]  |
+| Guage | [Profit YTD] against target | 
+
+***Interactions***
+
+ **X** = No interaction
+ **O** = Interaction
+
+***Executive Summary Page Interactions***
+
+Product Category and Top 10 Products Table ***X*** Card Visuals and KPI
+
+***Customer Detail Page*** 
+
+Top 20 Customers Table **X** None of the visuals
+
+Total Customers By Product Donut Chart ***X*** Customers line graph
+
+Total Customers By Country Donut Chart ***O Cross Filter O*** Total Customers By Product Donut Chart
+
+***Product Detail Page*** 
+
+Orders vs. profitability Scatter Graph ***X*** None of the visuals 
+
+Top 10 Products Table ***X*** None of the visuals 
 
 ***Milestone 7:
 Metrics with SQL***
 1. Connected to SQL Server via SQLTools extension in VSCode using the following credentials:
+
+&nbsp;&nbsp; `````` 
 HOST, PORT, DATABASE, USERNAME, PASSWORD
+;``````
 
-1. SQL Query to extract all table names: 
-SELECT 
+2. SQL Query to extract all table names
 
-1. SQL Query to print columns in all tables: 
-QUERY 
+&nbsp;&nbsp; ``````
+SELECT table_name
+FROM information_schema.tables
+WHERE table_schema = 'public'
+AND table_type = 'BASE TABLE'
+;``````
 
-1. Exported all files to CSV file 
-The following example shows exporting to a csv file for the questions files 
+3. SQL Query to print columns in all tables: 
 
+&nbsp;&nbsp; `````` 
+SELECT * from column_name
+;``````
 
-Uploading the following tables:
-1. Orders
-2. Products
-3. Stores
-4. Customers
+4. Exported all tables to CSV files
+
+5. Saved files showing the SQL query (.sql files) and query output/answer (.csv files) 
+for the following questions: 
+  
+ ``````
+
+1. How many staff are there in all of the UK stores?
+
+2. Which month in 2022 has had the highest revenue?
+
+3. Which German store type had the highest revenue for 2022?
+
+4. Create a view where the rows are the store types and the columns are the total sales, percentage of total sales and the count of orders
+
+5. Which product category generated the most profit for the "Wiltshire, UK" region in 2021?
+
+``````
+
 
 
   #### 4. Installation
@@ -236,12 +274,10 @@ Uploading the following tables:
   - Clone GitHub repository:
     git clone https://github.com/Gits0L/data-analytics-power-bi-report82.git
 
-  #### 5. Usage
----
-  - Use code to import import and connect to database using credentials, clean and analyse financial data 
-
   #### 6. File structure
   ---
   - README.md: Repository information 
-  - db_utils.py: Final version 
-  - loans_keywords: Glossary of loan columns to understand dataset
+  - Images: 
+  Executive Summary Page Image , Map Visual Page Image, Customer Info Page Image, Product Detail Page Image, Date Hierarchy Image, Georaphy Hierarchy Image  
+  - sql files for question 1-5
+  - csv files for output of sql files answering questions 1-5
