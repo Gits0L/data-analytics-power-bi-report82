@@ -2,7 +2,7 @@
 
 |      |       |
 :-------------------------:|:-------------------------:
-![Alt text](<Executive Summary .png>))  | ![Alt text](<Customer Info.png>))
+![Alt text](<Executive Summary .png>)  | ![Alt text](<Customer Info.png>)
 ![Alt text](<Product Detail.png>)  |  ![Alt text](<Map VIsual .png>)
 
 ## Contents of README
@@ -14,10 +14,6 @@
 5. Usage
 6. File Structure
 ``````
-
-
-
-
 
 ### 1. Project information 
 ---
@@ -116,7 +112,8 @@ CALCULATE(
 [Total Revenue] * [Total Unique Customers]
 
 4. Created date hierachy
-![alt text](PICTURE)
+
+![Alt text](<date hierarchy.png>)
 
 5. Created a calculated column to create a full country name: 
   
