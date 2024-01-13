@@ -58,6 +58,11 @@ Model Creation***
 
 ![alt text](PICTURE OF MODEL)
 1. Created a date table to form the basis for time intelligence within the model using the folllowing DAX formula: 
+Dates = DATESBETWEEN(
+    Orders[Order Date],
+    MIN(Orders[Order Date]),
+    MAX(Orders[Order Date])
+)
 
 1. Built one-to-many relationships with a single filter between the following tables to form a star-based schema: 
 
@@ -75,40 +80,51 @@ Model Creation***
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Orders: 
-DAX
+COUNT(Orders[User ID]) 
 
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Revenue: 
- DAX
+SUMX(Orders, Orders[Product Quantity] * RELATED(Products[Sale Price]))
 
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Profit: 
- DAX
+SUMX(Orders, (RELATED(Products[Sale Price]) - RELATED(Products[Cost])) * Orders[Product Quantity])
 
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Customers:
- DAX
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Customers: 
+CALCULATE(
+    COUNTROWS(DISTINCT(
+        VALUES(Orders[User ID])
+    )
+)
+)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Quantity: 
-DAX
+SUM(Orders[Product Quantity])
 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Profit YTF: 
-DAX
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Profit YTD:  
+CALCULATE(
+    [Total Profit], FILTER(ALL('Dates'), VALUE('Dates'[Year]) = (YEAR(MAX('Dates'[Order Date])))
+    ))
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Revenue YTD:
-DAX
+CALCULATE(
+    [Total Revenue],
+    FILTER(
+        ALL('Dates'),
+        VALUE('Dates'[Year]) = YEAR(MAX('Dates'[Order Date]))
+    )
+)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Revenue per Customer:
-DAX
+[Total Revenue] * [Total Unique Customers]
 
 4. Created date hierachy
 ![alt text](PICTURE)
 
-5. Created a calculated column to create a full country name with the following DAX formula: 
-DAX
+5. Created a calculated column to create a full country name: 
+  
 
 6. Created a geography column with the following DAX formula:
 DAX
