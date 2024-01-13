@@ -137,9 +137,9 @@ CALCULATE(
 | Card | [ Total Orders]  | Top 1 by [Total Revenue] | None |
 | Slicer | Dates[Year]  | Between | None |
 
-***utive Summary Page***
+***Executive Summary Page***
 
-![Alt text](<utive Summary .png>) 
+![Alt text](<Executive Summary .png>) 
 
 | Visual | Measures Used | Filters  | Additional Formatting |
 | ----------- | ----------- | -------- | ------ |
@@ -194,7 +194,7 @@ VAR CurrentQuarterStart = MAX('Dates'[Start Of Quarter]) RETURN CALCULATE('Measu
 
 ***Stores Page***
 
-![Alt text](<Map Visual .png>) 
+![ ](<stores page.png>) 
 
 | Visual | Measures Used |
 | ----------- | ----------- |
