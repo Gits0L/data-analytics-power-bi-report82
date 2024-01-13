@@ -32,7 +32,7 @@ This project entails the development of a comprehensive report consisting of the
 The function of this project is to utulise the skills learnt in the PowerBi module of the aicore datascience course to build a data visualisation mimicking real retail data. By leveraging the company's business objectives, including sales metrics on a quarterly and annual basis, the report aims to deliver actionable insights to guide the company's future strategic direction. The report provides a succinct business overview created for C-suite executives within a global retail corporation. 
  
 
-### 3. Milestones:
+### Report Creation:
  #### The project is split into milestones each containing various tasks to complete the visualisation.
 ---
 
@@ -137,9 +137,9 @@ CALCULATE(
 | Card | [ Total Orders]  | Top 1 by [Total Revenue] | None |
 | Slicer | Dates[Year]  | Between | None |
 
-***Executive Summary Page***
+***utive Summary Page***
 
-![Alt text](<Executive Summary .png>) 
+![Alt text](<utive Summary .png>) 
 
 | Visual | Measures Used | Filters  | Additional Formatting |
 | ----------- | ----------- | -------- | ------ |
