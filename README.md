@@ -127,7 +127,7 @@ DAX
 ***Miletone 3:
 Customer Detail Page***
 
-![alt text](FINISHED PAGE)
+![Alt text](<Customer Info.png>)
 
 
 | Visual | Measures Used | Filters  | Aditional Formatting |
@@ -143,9 +143,9 @@ Customer Detail Page***
 | Slicer | Dates[Year]  | Between | None |
 
 ***Milestone 4:
-Exectuvie Summary Page***
+Executive Summary Page***
 
-![alt text](FINISHED PAGE)
+![Alt text](<Executive Summary .png>) 
 
 | Visual | Measures Used | Filters  | Additional Formatting |
 | ----------- | ----------- | -------- | ------ |
