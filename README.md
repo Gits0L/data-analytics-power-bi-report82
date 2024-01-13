@@ -122,7 +122,7 @@ CALCULATE(
 DAX
 
 7. Created a geography hierarchy
-
+![Alt text](<geog hierarch.png>)
 
 ***Miletone 3:
 Customer Detail Page***
