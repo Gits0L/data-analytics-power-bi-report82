@@ -225,8 +225,7 @@ Orders vs. profitability Scatter Graph ***X*** None of the visuals
 
 Top 10 Products Table ***X*** None of the visuals 
 
-***Milestone 7:
-Metrics with SQL***
+***Metrics with SQL***
 1. Connected to SQL Server via SQLTools extension in VSCode using the following credentials:
 
 &nbsp;&nbsp; `````` 
